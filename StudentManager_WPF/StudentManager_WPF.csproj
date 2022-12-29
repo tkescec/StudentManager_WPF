@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,6 +56,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Utils\ImageUtils.cs" />
+    <Compile Include="ViewModels\KolegijViewModel.cs" />
+    <Compile Include="ViewModels\ProfesorViewModel.cs" />
+    <Compile Include="ViewModels\StudentViewModel.cs" />
+    <Compile Include="Views\Kolegij\EditKolegijPage.xaml.cs">
+      <DependentUpon>EditKolegijPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Kolegij\KolegijPage.cs" />
+    <Compile Include="Views\Kolegij\ListKolegijPage.xaml.cs">
+      <DependentUpon>ListKolegijPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Profesor\EditProfesorPage.xaml.cs">
+      <DependentUpon>EditProfesorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Profesor\ListProfesorPage.xaml.cs">
+      <DependentUpon>ListProfesorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Profesor\ProfesorPage.cs" />
+    <Compile Include="Views\Student\EditStudentPage.xaml.cs">
+      <DependentUpon>EditStudentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\ListStudentPage.xaml.cs">
+      <DependentUpon>ListStudentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\StudentPage.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,12 +89,46 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DAL\Kolegij\IKolegijRepo.cs" />
+    <Compile Include="DAL\Kolegij\KolegijRepo.cs" />
+    <Compile Include="DAL\Profesor\IProfesorRepo.cs" />
+    <Compile Include="DAL\Profesor\ProfesorRepo.cs" />
+    <Compile Include="DAL\RepoFactory.cs" />
+    <Compile Include="DAL\Student\IStudentRepo.cs" />
+    <Compile Include="DAL\Student\StudentRepo.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Kolegij\EditKolegijPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Kolegij\ListKolegijPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Profesor\EditProfesorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Profesor\ListProfesorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Student\EditStudentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Student\ListStudentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Kolegij.cs" />
+    <Compile Include="Models\Profesor.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -93,6 +153,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Assets\back.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,10 +3,39 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:StudentManager_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        Title="Student Manager" Height="450" Width="800">
     <Grid>
-        
+        <TabControl>
+            <TabItem Header="Studenti">
+                <Grid>
+                    <Frame 
+                        x:Name="StudentFrame" 
+                        NavigationUIVisibility="Hidden"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Profesori">
+                <Grid>
+                    <Frame 
+                        x:Name="ProfesorFrame"
+                        NavigationUIVisibility="Hidden"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Kolegiji">
+                <Grid>
+                    <Frame 
+                        x:Name="KolegijFrame"
+                        NavigationUIVisibility="Hidden"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>

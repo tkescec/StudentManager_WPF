@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:StudentManager_WPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="StudentBackground" Color="#8ebfd1" />
+        <SolidColorBrush x:Key="ProfesorBackground" Color="#9fd1c3" />
+        <SolidColorBrush x:Key="KolegijBackground" Color="#b9d19f" />
     </Application.Resources>
 </Application>
