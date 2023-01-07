@@ -11,4 +11,15 @@ namespace StudentManager_WPF.Models
         public int IDKolegij { get; set; }
         public string Naziv { get; set; }
     }
+    
+    public override bool Equals(object obj)
+    {
+        return obj is Kolegij kolegij &&
+               IDKolegij == kolegij.IDKolegij;
+    }
+
+    public override int GetHashCode()
+    {
+        return -96594627 + IDKolegij.GetHashCode();
+    }
 }
